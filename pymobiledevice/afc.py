@@ -294,7 +294,7 @@ class AFCClient(object):
                 s, d = self.receive_data()
         except ImportError:
             self.lockdown = LockdownClient()
-            self.service = self.lockdown.startService(serviceName)
+            self.service = self.lockdown.startService(self.serviceName)
             self.file_write(handle, data)
         return s
 

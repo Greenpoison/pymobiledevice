@@ -32,6 +32,7 @@ def run_command(service, uuid, cmd):
         if z.get("Status") == "Complete":
             return z.get("Status")
         z = service.recvPlist()
+    service.close()
     return z
 
 
