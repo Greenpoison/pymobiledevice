@@ -19,6 +19,8 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 f = path.join(here, 'README.md')
 
+requirements = open('requirements.txt').read().splitlines()
+
 setup(
     name='pymobiledevice',
     version='0.1.4',
@@ -40,11 +42,7 @@ setup(
     packages=find_packages(),
     py_modules=['pymobiledevice'],
     entry_points='',
-    install_requires=[
-        'ak-vendor',
-        'ak-construct',
-        'ak-m2crypto',
-    ],
+    install_requires=requirements,
     extras_require={
         'dev': [''],
         'test': [''],
