@@ -14,16 +14,11 @@ Date created: 2015-11-24
 """
 
 from setuptools import setup, find_packages
-from os import path
 
-here = path.abspath(path.dirname(__file__))
-f = path.join(here, 'README.md')
-
-requirements = open('requirements.txt').read().splitlines()
 
 setup(
     name='pymobiledevice',
-    version='0.1.5',
+    version='0.1.6',
     description="Interface with iOS devices",
     url='https://github.com/appknox/pymobiledevice',
     author='dhilipsiva',
@@ -42,7 +37,11 @@ setup(
     packages=find_packages(),
     py_modules=['pymobiledevice'],
     entry_points='',
-    install_requires=requirements,
+    install_requires=[
+        "ak-construct",
+        "ak-M2Crypto",
+        "ak-vendor",
+    ],
     extras_require={
         'dev': [''],
         'test': [''],
