@@ -23,7 +23,7 @@ requirements = open('requirements.txt').read().splitlines()
 
 setup(
     name='pymobiledevice',
-    version='0.1.4',
+    version='0.1.5',
     description="Interface with iOS devices",
     url='https://github.com/appknox/pymobiledevice',
     author='dhilipsiva',
